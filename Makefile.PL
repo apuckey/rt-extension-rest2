@@ -24,6 +24,7 @@ requires 'Plack::Middleware::RequestHeaders';
 requires 'Plack::Middleware::ReverseProxyPath';
 requires 'Module::Path';
 requires 'Pod::POM';
+requires 'YAML::Tiny';
 
 recommends 'JSON::XS';
 
