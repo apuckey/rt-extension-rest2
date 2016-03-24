@@ -27,5 +27,6 @@ requires 'Pod::POM';
 
 recommends 'JSON::XS';
 
+auto_install();
 sign;
 WriteAll;
