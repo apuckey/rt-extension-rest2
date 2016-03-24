@@ -27,6 +27,13 @@ requires 'Pod::POM';
 
 recommends 'JSON::XS';
 
+use Config;
+my $secure_perl_path = $Config{perlpath};
+if ($^O ne 'VMS') {
+    $secure_perl_path .= $Config{_exe}
+        unless $secure_perl_path =~ m/$Config{_exe}$/i;
+}
+
 auto_install();
 sign;
 WriteAll;
