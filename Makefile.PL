@@ -27,6 +27,9 @@ requires 'Pod::POM';
 
 recommends 'JSON::XS';
 
+my ($lp) = ($INC{'RT.pm'} =~ /^(.*)[\\\/]/);
+my $lib_path = join( ' ', "$RT::LocalPath/lib", $lp );
+
 use Config;
 my $secure_perl_path = $Config{perlpath};
 if ($^O ne 'VMS') {
